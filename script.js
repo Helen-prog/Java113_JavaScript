@@ -386,12 +386,209 @@ console.log(typeof(message)); */
 
 // Написать программу, которая позволяет заполнить массив с клавиатуры и вывести его в обратном порядке
 
-let mas = new Array(5);
-for(let i=0; i<mas.length; i++){
-    mas[i] = prompt("Введите " + (i+1) + " элемент массива:");
-}
-console.log(mas);
+// let mas = new Array(5);
+// for(let i=0; i<mas.length; i++){
+//     mas[i] = prompt("Введите " + (i+1) + " элемент массива:");
+// }
+// console.log(mas);
 
-for(let i = mas.length-1; i >= 0; i--){
-    document.write(mas[i] + " ");
+// for(let i = mas.length-1; i >= 0; i--){
+//     document.write(mas[i] + " ");
+// }
+
+// let arr = [2, 5, 7, "Игорь", 1.5, true];
+// console.log(arr);
+// document.write(arr);
+
+// let arr = [[1,2,3], [4,5,6], [7,8,9]];
+// console.log(arr);
+// console.table(arr);
+// console.log(arr[2][0]);
+
+// let question = ["На ноль делить можно", "Волга впадает в Каспийское море", "Атмосферное давление увеличивается с высотой", "2x2 будет 8", "Дельфины - это рыбы", "Мадонна - это настоящее имя певицы", "Первая мировая война началась 1 сентября 1939 года"];
+// let correct = [false, true, false, false, false, false, false];
+// let sum = 0;
+// let res = new Array();
+
+// for(let i = 0; i < question.length; i++){
+//     let answer = confirm(question[i]);
+//     if(answer == correct[i]){
+//         res[i] = 10;
+//         sum += res[i];   
+//     }
+//     else{
+//         res[i] = 0;
+//     }     
+// }
+
+// document.write("<table border='1' width='500'>");
+// document.write("<tr>");
+// document.write("<th>Вопрос</th>");
+// document.write("<th>Баллы</th>");
+// document.write("</tr>");
+
+// for(let i = 0; i < question.length; i++){
+//     document.write("<tr>");
+//     document.write("<td>" + question[i] + "</td>");
+//     document.write("<td>" + res[i] + "</td>");
+//     document.write("</tr>");
+// }
+
+// document.write("<tr>");
+// document.write("<th>Итого</th>");
+// document.write("<th>"+ sum +"</th>");
+// document.write("</tr>");
+// document.write("</table>");
+
+
+// let text1 = document.getElementById("text_1");
+// console.log(text1);
+// console.log(text1.textContent);
+// text1.textContent = "Новое <b>содержимое</b>";
+
+// let text2 = document.getElementById("text_2");
+// console.log(text2);
+// console.log(text2.innerHTML);
+// text2.innerHTML = "Новое <b>содержимое</b>";
+
+// let res = +prompt("Выберите изображение", "1-собака, 2-кот, 3-птица, 4-рыба");
+// document.write("<div id='image'></div>");
+// let img = document.getElementById("image");
+
+// switch (res) {
+//     case 1:
+//         img.innerHTML = "<img src='img/dog.jpg'>";
+//         break;
+//     case 2:
+//         img.innerHTML = "<img src='img/cat.jpg'>";
+//         break;
+//     case 3:
+//         img.innerHTML = "<img src='img/bird.jpeg'>";
+//         break;
+//     case 4:
+//         img.innerHTML = "<img src='img/fish.jpeg'>";
+//         break;
+//     default:
+//         alert("Такого изображения нет");
+// }
+
+// let tag = document.getElementsByTagName("p")[2];
+// console.log(tag);
+// tag.innerHTML = "Hello <u>tag</u>";
+// tag.style.color = "blue";
+// tag.style.fontWeight = "bold";
+// tag.style.background = "silver";
+// tag.style.padding = "10px 20px";
+// // list-style-type => listStyleType
+// tag.id="text";
+// tag.className="x";
+
+// let q = document.getElementsByClassName("a");
+// console.log(q);
+// q[0].style.color = "blue";
+// q[1].style.color = "red";
+
+// document.querySelector(css);
+// document.querySelectorAll(css);
+
+// let res = document.querySelector("p");
+// console.log(res);
+
+// let res2 = document.querySelectorAll("p")[1];
+// console.log(res2);
+
+// let el = document.querySelector("h2");
+// console.log(el.innerHTML);
+
+// let els = document.querySelectorAll("h2");
+// console.log(els[1].innerHTML);
+
+// let lists = document.querySelectorAll("li");
+
+// for(let i=0; i<lists.length; i++){
+//     lists[i].innerHTML += "!!!";
+// }
+
+// let m = document.querySelectorAll(".purple li")[1];
+// m.style.color="orange";
+
+// let m = document.getElementsByClassName("purple")[0].getElementsByTagName("li")[1];
+// m.style.color="orange";
+// console.log(m);
+
+// let js = ["нужно", "учить", "JavaScript"];
+// console.log(js);
+
+// console.log(js.pop());  // удаляет последний элемент из массива
+// console.log(js);
+
+// js.push("JavaScript", "!");  // добаляет элемент в конец массива
+// console.log(js);
+
+// console.log(js.shift());  // удаляет первый элемент из массива
+// console.log(js);
+
+// js.unshift("Почему", "нужно");  // добаляет элемент в начало массива
+// console.log(js);
+
+// js.splice(1, 1); // удаление, первый параметр -индекс элемента, второй парамет - количество удаляемых элементов
+// console.log(js);
+
+// js.splice(1, 0, "сложный", "язык"); // добавление, если второй парамет "0"
+// console.log(js);
+
+// js.splice(-2, 0, "но", "очень", "интересный"); 
+// console.log(js);  // работает с отрицательными индексами
+
+// let str = js.join(" ");  // преобразовывает все элементы массива в строку, через заданный символ разделитель
+// console.log(str);
+
+// Functions Declaration
+
+// function test(a, b, c) {
+//     let res = a + b + c;
+//     return [res, a];
+// }
+
+// let x1 = 10, x2 = 20, x3 = 30;
+// let q = test(x1,x2,x3);  // 60
+// // let y1 = 5, y2 = 2, y3 = 3;
+// // test(y1,y2,y3);  // 10
+// // alert(q);
+// console.log(q);
+
+// function showArrayContent(arrayToShow) {
+//     if(arrayToShow.length == 1){
+//         return arrayToShow;
+//     }
+//     else{
+//         let last = arrayToShow.pop();
+//         let str = arrayToShow.join(', ');
+//         let all = str + " и " + last;
+//         return all;
+//     }
+// }
+
+// let a = new Array('Текст');
+// let b = new Array('день', 'ночь');
+// let c = new Array('зима', 'весна', 'лета', 'осень');
+// alert(showArrayContent(a)); 
+// alert(showArrayContent(b)); 
+// alert(showArrayContent(c));
+
+alert(sum1(2, 3));
+
+function sum1 (a, b){
+    return a + b;
 }
+
+
+
+// Function Expression
+
+
+let sum2 = function(a, b){
+    return a + b;
+}
+
+alert(sum2(12, 13));
