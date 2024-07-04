@@ -576,19 +576,241 @@ console.log(typeof(message)); */
 // alert(showArrayContent(b)); 
 // alert(showArrayContent(c));
 
-alert(sum1(2, 3));
+// alert(sum1(2, 3));
 
-function sum1 (a, b){
-    return a + b;
+// function sum1 (a, b){
+//     return a + b;
+// }
+
+
+
+// // Function Expression
+
+
+// let sum2 = function(a, b){
+//     return a + b;
+// }
+
+// alert(sum2(12, 13));
+
+// Cамовызывающаяся (анонимная) функция
+
+// (function(){
+//     alert("Привет мир!");
+// }());
+
+// (function(n){
+//     alert(n * n);
+// })(4);
+
+// (function(n){
+//     alert(n * n);
+// })(9)
+
+
+// function test(a, b, c) {
+//     let res = a + b + c;
+//     return res;
+// }
+
+// alert(test(10,20,30));
+
+// // Arrow Function - стрелочные функции
+
+// let test2 = (a, b, c) => a + b + c;
+
+// alert(test2(1,2,3));
+
+// let test3 = (a, b, c) => {
+//         let res = a + b + c;
+//         return res;
+//     }
+
+// alert(test3(1,2,3));
+
+// let hello = (n) => {
+//     if (n) {
+//         return "Hello";
+//     }
+//     return "Привет";
+// }
+
+// alert(hello(0));
+
+// let hello = n => alert("Hello, " + n);
+
+// hello("Igor");
+
+// Объект Math
+
+// console.log(Math.floor(7.9));
+// console.log(Math.ceil(7.1));
+// console.log(Math.round(7.5));
+
+// (function(min, max){
+//     document.write(Math.floor(Math.random() * (max - min) + min) + "<br>");
+// }(2, 9));
+
+// document.write(Math.random() * 9 + "<br>");
+// document.write(Math.floor(Math.random() * 7 + 2) + "<br>");
+
+// let mas = function(words){
+//     return words[Math.floor(Math.random() * words.length)];
+// }
+
+// let arr = ["Цикл", "Массив", "Условие", "Функция"];
+// let char = mas(arr);
+// document.write(char);
+
+// let a = 5;
+
+// if (4 > 0) {
+
+//     a++;
+//     document.write(a + "<br>");
+// }
+
+// document.write("a = " + a);
+
+// let j = 2;
+
+// function ch() {
+//     let j = 3;
+//     return j;
+// }
+
+// let a = ch();
+// alert(a);
+// alert(j);
+
+// let createColor = () => Math.floor(Math.random() * 256);   
+
+// document.write("<div id='block'></div>");
+// let id = document.getElementById("block");
+
+// id.style.width = id.style.height = "100px";
+// id.style.background = "rgb(" + createColor() + ", " + createColor() + ", " + createColor() + ")";
+
+
+
+// createColor();
+
+// let createColor = () => {
+//     let r = Math.floor(Math.random() * 256);
+//     let g = Math.floor(Math.random() * 256);
+//     let b = Math.floor(Math.random() * 256);
+//     id.style.background = "rgb(" + r + ", "+ g +", " + b + ")";
+// }
+
+// createColor();
+
+// function hello(name="незнакомец", age=30){
+//     // name = name || "незнакомец";
+//     document.write("Привет, " + name + "! Мне "+ age +" лет.<br>" );
+// }
+
+// hello("Сергей", 25);
+// hello(65);
+// alert(hello);
+
+// let str = "I\'m a JavaScript \"programmer\"";
+// document.write(str + "<br>");
+// // document.write(str[2] + "<br>");
+
+
+// // // str[2] = "y"; // ошибка
+// // // str = str[2] + "y"
+// // // document.write(str + "<br>");
+
+// // document.write(str.length + "<br>");
+// // document.write(str.toUpperCase() + "<br>");
+// // document.write(str.toLowerCase() + "<br>");
+// // document.write(str.indexOf("m", 3) + "<br>");
+// // document.write(str.lastIndexOf("m") + "<br>");
+// // document.write(str.split(" ") + "<br>");
+// // console.log(str.split(" ", 2));
+
+// // document.write(str.slice(3, 0) + "<br>");
+// // document.write(str.substring(3, 0) + "<br>");
+
+// let st = str.split(" ");
+// console.log(st);
+
+// let st2 = st.join("_");
+// console.log(st2);
+
+// События
+
+// function click1(){
+//     alert('Клик');
+// }
+
+// let m = document.getElementById("mes");
+
+// function over(){
+//     m.style.color = "red";
+// }
+
+// function out(){
+//     m.style.color = "blue";
+// }
+
+// function change(){
+//     let id = document.getElementById("id1");
+//     id.style.color="orange";
+// }
+
+// function randomBg(){
+//     let r = Math.floor(Math.random() * 256);
+//     let g = Math.floor(Math.random() * 256);
+//     let b = Math.floor(Math.random() * 256);
+//     document.body.style.background = "rgb(" + r + ", "+ g +", " + b + ")";
+// }
+
+// function reset(id){
+//     id.innerHTML = "Новый текст";
+// }
+
+// function setColor(arg){
+//     document.body.style.background = arg.className;
+// }
+
+
+// let newImg = document.getElementById("newimg");
+
+// function on(){
+//   newImg.src="night.png";
+// }
+
+// function off(){
+//     newImg.src="day.png";
+//   }
+
+// document.getElementById("but").onclick = function(){
+//     alert("Спасибо");
+// }
+
+// but.onclick = function(){
+//     alert("Спасибо");
+// }
+
+// function hello() {
+//     alert("Спасибо");
+// }
+
+// but.onclick = hello;
+
+let el = document.getElementById("but");
+
+// el.addEventListener("click", function(){
+//     el.innerHTML = "Новый текст";
+// })
+function setText(){
+    el.innerHTML = "Новый текст";
 }
+el.addEventListener("click", setText);
 
-
-
-// Function Expression
-
-
-let sum2 = function(a, b){
-    return a + b;
-}
-
-alert(sum2(12, 13));
+el.addEventListener("contextmenu", function(){
+    el.style.color = "green";
+    el.style.background = "yellow";
+})
