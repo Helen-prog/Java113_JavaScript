@@ -993,31 +993,184 @@ console.log(typeof(message)); */
 //     image.src = array[i];
 // }
 
-let imgTime = ["c0.gif","c1.gif","c2.gif","c3.gif","c4.gif","c5.gif","c6.gif","c7.gif","c8.gif","c9.gif"];
+// let imgTime = ["c0.gif","c1.gif","c2.gif","c3.gif","c4.gif","c5.gif","c6.gif","c7.gif","c8.gif","c9.gif"];
 
-let t = document.querySelectorAll("#clock img");
+// let t = document.querySelectorAll("#clock img");
 
-clock();
+// clock();
 
-function clock(){
-    let time = new Date();
-    let hour = time.getHours();
-    let min = time.getMinutes();
-    let sec = time.getSeconds();
-    getImg(hour,min,sec);
-    setTimeout(clock, 1000);
+// function clock(){
+//     let time = new Date();
+//     let hour = time.getHours();
+//     let min = time.getMinutes();
+//     let sec = time.getSeconds();
+//     getImg(hour,min,sec);
+//     setTimeout(clock, 1000);
+// }
+
+// function getImg(h, m, s){  // h = 12 = 1.2
+//     t[0].src = imgTime[parseInt(h/10)];
+//     t[1].src = imgTime[h%10];
+
+//     t[3].src = imgTime[Math.floor(m/10)];
+//     t[4].src = imgTime[m%10];
+
+//     t[6].src = imgTime[Math.floor(s/10)];
+//     t[7].src = imgTime[s%10];
+// }
+
+// alert(document.documentElement.innerHTML);
+// alert(document.head.innerHTML);
+// alert(document.body.innerHTML);
+
+// let title = document.querySelector("h1").innerHTML;
+// console.log(title);
+
+// let title = document.querySelector("h1").firstChild.nodeValue;
+// let title = document.querySelector("h1").nodeName;
+// let title = document.querySelector("h1").firstChild.nodeType;
+// console.log(title);
+
+
+// let elem = document.querySelector("#root");
+
+// let tag = document.createElement("p");  // <p></p>
+// let node = document.createTextNode("Новый текст!!!"); // Новый текст!!!
+// tag.append(node);  // <p>Новый текст!!!</p>
+
+// elem.append(tag);  // добаляет новый элемент последним дочерним элементом внутри родительского
+// elem.prepend(tag); // добаляет новый элемент первым дочерним элементом внутри родительского
+// elem.before(tag);  // добаляет новый элемент до выбранного id
+// elem.after(tag);  // добаляет новый элемент после выбранного id
+
+// elem.replaceWith(tag);
+
+// let list = document.querySelector("ul");
+
+// let newItem = document.createElement("li");  // <li></li>
+// newItem.innerHTML = "Новый <i>элемент списка</i>";  // <li>Новый <i>элемент списка</i></li>
+
+// list.append(newItem);
+
+// let i = 1;
+
+// document.querySelector("#func2").addEventListener("click", add);
+// document.querySelector("#func1").addEventListener("click", change);
+// let list2 = document.querySelector("#list2");
+
+// function add(){
+//     let elem = document.createElement("li");
+//     elem.innerHTML = "Water_" + i;
+    
+//     list2.append(elem);
+//     i++;
+// }
+
+// function change(){
+//     let elem = list2.lastChild;
+//     document.querySelector("#list1").append(elem);
+// }
+
+// let div = document.querySelector("#root");
+// div.insertAdjacentHTML('beforebegin', '<p>До выбранного элемента</p>');
+// div.insertAdjacentHTML('afterend', '<p>После выбранного элемента</p>');
+// div.insertAdjacentHTML('afterbegin', '<p>Первым внутри выбранного элемента</p>');
+// div.insertAdjacentHTML('beforeend', '<p>Последним внутри выбранного элемента</p>');
+
+// let one = document.querySelector("#p1");
+// // one.remove();  // удаляет выбранный элемент
+// let two = document.querySelector("#p2");
+
+// two.after(one);
+
+// let ul = document.querySelector("ul");
+// let li = ul.cloneNode(true);
+
+// li.querySelector('li').innerHTML = "Начало клонируемых элементов";
+// ul.after(li);
+
+
+// let list = document.querySelector("ul.list");
+// list.insertAdjacentHTML("beforebegin", "<h2>Список </h2><hr>");
+// let list_inner = document.querySelector("h2");
+// list_inner.insertAdjacentText("beforeend", "планет");
+// list.insertAdjacentHTML("afterend", "<hr>");
+
+// let hr = document.querySelectorAll("hr")[1];
+// let h4 = document.createElement("h4");  // <h4></h4>
+// h4.innerHTML = "Конец списка";  // <h4>Конец списка</h4>
+// hr.insertAdjacentElement("afterend", h4);
+
+// let idRemove = setInterval(function(){
+//     let li = document.querySelector("ul.list > li");
+//     if(li == null){
+//         clearInterval(idRemove);
+//         // alert("Список удален");
+//         list.insertAdjacentHTML("afterbegin", "<li>Список удален</li>")
+//     }
+//     else {
+//         li.remove();
+//     }
+// }, 500);
+
+
+// let spans = document.querySelectorAll(".remove-button");
+
+// for(let i=0; i<spans.length; i++){
+//     spans[i].addEventListener("click", function(){
+//         this.parentNode.remove();
+//     })
+// }
+
+// let div = document.querySelector("div");
+// div.className = 'alert';
+// let activeDiv = document.querySelector(".active");
+// activeDiv.classList.add('hidden');
+// // activeDiv.classList.remove('hidden');
+
+// activeDiv.classList.toggle('hidden');
+
+// activeDiv.classList.replace('active', 'alert');
+
+// let frogImg = document.querySelector("#greenFrog");
+
+// console.log(frogImg.id);
+// console.log(frogImg.className);
+// console.log(frogImg.src);
+// console.log(frogImg.alt);
+// console.log(frogImg.title);
+// // console.log(frogImg.data-set);
+
+// frogImg.title = "Новый текст подсказки";
+// console.log(frogImg.getAttribute('src'));
+// console.log(frogImg.getAttribute('data-set'));
+// frogImg.setAttribute('src', '4.jpg');
+// // frogImg.removeAttribute('src');
+// console.log(frogImg.hasAttribute('src'));
+
+
+// document.form1.style.background = "silver";
+
+// document.forms[0].style.padding = "16px";
+// document.forms.form1.style.border = "2px dotted gray";
+// document.forms['form1'].style.border = "4px dotted gray";
+
+// document.form1.name1.style.color = "blue";
+// document.form1['name1'].style.background = "aqua";
+
+// let txt = document.querySelector("#text1");
+// let but = document.querySelector("button");
+
+// but.addEventListener("click", content);
+
+// function content(){
+//     alert(txt.value);
+// }
+
+let choose = document.querySelector("input[type='button']");
+
+choose.addEventListener("click", chooseColor);
+
+function chooseColor(){
+    document.body.style.background = document.form3.radio2.value;
 }
-
-function getImg(h, m, s){  // h = 12 = 1.2
-    t[0].src = imgTime[parseInt(h/10)];
-    t[1].src = imgTime[h%10];
-
-    t[3].src = imgTime[Math.floor(m/10)];
-    t[4].src = imgTime[m%10];
-
-    t[6].src = imgTime[Math.floor(s/10)];
-    t[7].src = imgTime[s%10];
-}
-
-
-
