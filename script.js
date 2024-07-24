@@ -1390,21 +1390,202 @@ console.log(typeof(message)); */
 // console.log(bmw);
 // console.log(bmw.getAge());
 
-function Car(name, year) {
-    this.name = name;
-    this.year = year;
-    this.getAge = function(){
-        return new Date().getFullYear() - this.year;
-    }
-}
+// function Car(name, year) {
+//     this.name = name;
+//     this.year = year;
+//     this.getAge = function(){
+//         return new Date().getFullYear() - this.year;
+//     }
+// }
 
-Car.color = "black";
+// Car.color = "black";
 
-let ford = new Car("Ford", 2019);
-console.log(ford);
-console.log(ford.getAge());
+// let ford = new Car("Ford", 2019);
+// console.log(ford);
+// console.log(ford.getAge());
 
 
-let bmw = new Car("BMW", 2017);
-console.log(bmw);
-console.log(bmw.getAge());
+// let bmw = new Car("BMW", 2017);
+// console.log(bmw);
+// console.log(bmw.getAge());
+
+// let form = document.form1;
+
+// form.addEventListener("submit", event => {
+//     event.preventDefault();
+
+//     let title = form.title.value;
+//     let text = form.text.value;
+//     let description = form.description.value;
+
+//     // console.log(title, text);
+//     saveForm({title, text, description});  // {title: title, text: text}
+// })
+
+// function saveForm(data){  // {title, text, description}
+//     // let {title, text, description} = data;
+//     let formData = {
+//         date: new Date().toLocaleDateString(),
+//         // title, text, description
+//         ...data
+//     }
+
+//     console.log("Form data: ", formData);
+// }
+
+// class User{
+//     constructor(name){
+//         this.name = name;
+//     }
+
+//     get name(){
+//         return this._name;
+//     }
+
+//     set name(value){
+//         if (value.length < 6){
+//             alert("Имя слишком короткое.");
+//             return;
+//         }
+//         this._name = value;
+//     }
+
+//     sayHi(){
+//         document.write("Hello, " + this.name + "!");
+//     }
+// }
+
+// let user = new User("Александр");
+// alert(user.name);
+// user.name = "Петр";
+
+// user.sayHi();
+
+
+// alert(typeof User);
+
+// let user1 = new User("Петя");
+// user1.sayHi();
+
+// class Animal{
+//     constructor(name){
+//         this.speed = 0;
+//         this.name = name;
+//     }
+//     run(speed){
+//         this.speed = speed;
+//         document.write(`${this.name} бежит со скоростью ${this.speed} км/ч.<br>`);
+//     }
+//     stop(){
+//         this.speed = 0;
+//         document.write(`${this.name} стоит.<br>`);
+//     }
+// }
+
+// class Rabbit extends Animal{
+//     constructor(name, earLength){
+//         super(name);
+//         this.earLength = earLength;
+//     }
+//     hide() {
+//         document.write(`${this.name} прячется!<br>`);
+//     }
+//     stop(){
+//         super.stop();
+//         this.hide();
+//         console.log("Rabbit");
+//     }
+// }
+
+// let animal = new Animal("Мой питомец");
+// animal.run(80);
+// animal.stop();
+
+// let rabbit = new Rabbit("Белый кролик", 10);
+// rabbit.run(5);
+// rabbit.hide();
+// rabbit.stop();
+// document.write(rabbit.earLength);
+
+// class Header{
+//     constructor(img, h1, h2){
+//         this.src = img;
+//         this.h1 = h1;
+//         this.h2 = h2;
+//         this.out = "";
+//     }
+//     render(id){
+//         this.out = `
+//             <img src="${this.src}" alt="">
+//             <h1>${this.h1}</h1>
+//             <h2>${this.h2}</h2>
+//         `;
+//         document.querySelector(`#${id}`).innerHTML = this.out;
+//     }
+// }
+
+// class HeaderExt extends Header{
+//     constructor(img, h1, h2, tel){
+//         super(img, h1, h2);
+//         this.tel = tel;
+//     }
+//     get tel(){
+//         return this._tel;
+//     }
+//     set tel(t){
+//         let reg = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/;
+//         if(reg.test(t)){
+//             this._tel = t;
+//         }
+//         else{
+//             alert("Некорректный номер телефона");
+//             return;
+//         }
+//     }
+//     render(id){
+//         super.render(id);       
+//         this.out += `
+//             <h2>${this.tel}</h2>
+//         `;
+//         document.querySelector(`#${id}`).innerHTML = this.out;
+//     }
+// }
+
+// let img3 = "https://cdn1.iconfinder.com/data/icons/application-file-formats/128/javascript-64.png";
+// let header3 = new HeaderExt(img3, "Класс-наследние", "Описание наследника", "+7 999 555-55-55");
+// header3.tel = "Hello";
+// // header3.tel = "+7 333 987-65-43";
+// header3.render("header-ext");
+
+// let img = "https://cdn4.iconfinder.com/data/icons/file-extension-names-vol-5-1/512/48-64.png";
+// let header = new Header(img, "Заголовок", "Описание");
+// header.render("header");
+
+// let img2 = "https://cdn4.iconfinder.com/data/icons/file-extension-names-vol-8/512/27-64.png";
+// let header2 = new Header(img2, "Второй заголовок", "Другое описание");
+// header2.render("header2");
+
+// JSON
+
+// let info = '{"first_name":"Ivan","age":36,"mother":{"name":"Olga","age":58},"children":["Kate","Igor","Misha"],"married":true,"dog":null}';
+
+// console.log(info);
+
+// let person = JSON.parse(info);  // JSON => JS
+
+// console.log(person);
+
+// person.first_name = "Petr";
+// delete person.age;
+// person.work = "programmer";
+
+// for(let i in person){
+//     document.write(i + ": " + person[i] + "<br>");
+// }
+
+// let personString = JSON.stringify(person);  // JS -> JSON
+// console.log(personString);
+
+fetch('https://jsonplaceholder.typicode.com/todos')
+    .then(response => response.json())  // JSON => JS
+    .then(json => console.log(json));
